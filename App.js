@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import Quote from './app/components/Quote';
 
-const zenImage = require('./assets/images/zen.png');
+const quoteImage = require('./assets/images/quote.png');
 const quotes = require('./quotes.json');
 
 export default class App extends Component<Props> {
@@ -22,7 +22,7 @@ export default class App extends Component<Props> {
         return (
             <View style={styles.container}>
                 <TouchableOpacity style={styles.button} onPress={() => navigate('Quote')}>
-                    <Image source={zenImage} style={styles.buttonImage}/>
+                    <Image source={quoteImage} style={styles.buttonImage}/>
                 </TouchableOpacity>
                 <Text style={styles.readyText} onPress={() => alert(quotes['quotes'][2].quoteText)}>
                     I am ready to relax
